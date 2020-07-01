@@ -1,0 +1,64 @@
+@import '../../../assets/font/font-variables.scss';
+
+ ion-content.bg-image{
+     --background: url('../../../assets/image/helpinghands.jpg');
+        width: -webkit-fill-available;
+    }
+
+    ion-card{
+        width: 49%;
+        margin: 130px auto;
+        padding: 30px;
+        background: linear-gradient(to top, #caebfd 0%, #ffffff 100%)
+    }
+    
+    ion-card-title{
+        font: 40px $font-asimoveedge;
+    }
+    
+    ion-card-subtitle{
+        font: 32px $font-mala-text;
+    }
+    
+    ion-card-content{
+        
+        display: flex;
+        flex-direction: column;
+        padding: 28px;
+        margin: 28px;
+    }
+    
+    ion-label,p{
+        font: 20px Georgia, "Times New Roman", Times, serif;;
+        padding: 10px;
+        color: black;
+    }
+    
+    ion-textarea{
+        font: 20px Georgia, "Times New Roman", Times, serif;
+        padding: 10px;
+        height: 500px;
+        margin-top: 30px;
+        // color: gray;
+        // border-radius: 4px;
+        // border: solid lightblue;
+    }
+    
+    .submit-btn{
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;    
+        .button{
+            font-size: 20px;
+            font-family:  $font-asimoveedge;
+            --background: linear-gradient(to bottom right,#ff8000, 	#ffffff);
+            color: black;
+            width: 240px;
+            height: 50px;
+            text-transform: uppercase;
+            border: 1px black;
+            box-shadow: 5px #888888;
+        }
+    }
+
+

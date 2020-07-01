@@ -1,0 +1,43 @@
+<ion-content class="bg-image" [fullscreen]="true">
+  <div>
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide>
+        <img src="assets/image/kaarwaa.n.jpg" />
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/image/kaarwaa.n.jpg" />
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/image/kaarwaa.n.jpg" />
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-segment  [(ngModel)]="tab">
+        <ion-segment-button value="about">
+          <ion-label>{{'home.about' | translate}}</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="activities">
+          <ion-label>{{'home.activities' | translate}}</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-card-header>
+    <div [ngSwitch]="tab">
+      <ion-list *ngSwitchCase="'about'">
+        {{'home.aboutHeading' | translate}}
+        <ion-item>
+          {{'home.aboutDescription' | translate}}
+        </ion-item>
+      </ion-list>
+      <ion-list *ngSwitchCase="'activities'">
+        {{'home.activityHeading' | translate}}
+        <ion-item>
+          {{'home.activityDescription' | translate}}
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-card>
+</ion-content>
+

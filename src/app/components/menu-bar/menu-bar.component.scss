@@ -1,0 +1,72 @@
+@import '../../../assets/font/font-variables.scss';
+
+ion-menu{
+  margin-top: 60px;
+  // --background: linear-gradient(to top, #caebfd 0%, #ffffff 100%)
+}
+.menu-list {
+  height: calc(100% - 210px - 14%);
+}
+
+.profile {
+  margin: 35px 0 30px 35px;
+}
+
+.label {
+  color: gray;
+  margin-left: 5px;
+
+  &.name-label {
+    font: 24px/42px roboto-bold;
+  }
+
+  &.role-label {
+    font: 14px/19px roboto-regular;
+    text-transform: capitalize;
+    opacity: 0.56;
+  }
+}
+
+ion-avatar {
+  height: 90px;
+  width: 90px;
+  background-color: black;
+  border: 5px solid gray;
+}
+
+ion-item {
+  margin-left: 20px;
+
+  ion-icon {
+    color: gray;
+    height: 22px;
+    margin-inline-end: 12px !important;
+  }
+
+  ion-label{
+    font: 16px/20px roboto-bold;
+    --color: gray;
+    pointer-events: visible !important;
+  }
+}
+
+// .logout{
+//   ion-icon{
+//     color: $violet-50;
+//   }
+
+//   ion-label{
+//     --color: #{$violet-14};
+//     opacity: 0.50;
+//     letter-spacing: 3.6px;
+//     font: 18px/26px $font-brandon-bold;
+//   }
+// }
+
+ion-menu {
+  --width: 86.7vw;
+  --max-width: 325px;
+  @media (max-width: 340px){
+    --min-width: 86.7vw;
+  }
+}

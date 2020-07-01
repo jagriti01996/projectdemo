@@ -1,0 +1,81 @@
+@import '../../../assets/font/font-variables.scss';
+
+ion-content.bg-image{
+    --background: url('../../../assets/image/helpinghands.jpg');
+       width: -webkit-fill-available;
+   }
+
+ion-card{
+    width: 49%;
+    margin: 130px auto;
+    padding: 30px;
+    background: linear-gradient(to top, #caebfd 0%, #ffffff 100%)
+}
+
+ion-card-title{
+    font: 40px $font-asimoveedge;
+}
+
+ion-card-subtitle{
+    font: 32px $font-mala-text;
+}
+
+ion-card-content{
+    
+    display: flex;
+    flex-direction: column;
+    padding: 28px;
+    margin: 28px;
+}
+
+ion-item{
+    --background: none;
+    .label{
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 27px;
+        padding-bottom: 10px;
+        --ion-color-primary: black;
+    }
+}
+
+p{
+    font: 20px Georgia, "Times New Roman", Times, serif;
+    padding: 10px;
+    color: black;
+}
+
+ion-input{
+    font: 20px Georgia, "Times New Roman", Times, serif;;
+    padding: 10px;
+    // border-bottom: thin black;
+    // color: gray;
+    // border-radius: 4px;
+    // border: solid lightblue;
+}
+
+.submit-btn{
+    display: flex;
+    justify-content: center;    
+    .button{
+        font-size: 20px;
+        font-family:  $font-asimoveedge;
+        --background: linear-gradient(to bottom right,#ff8000, 	#ffffff);
+        color: black;
+        width: 240px;
+        height: 50px;
+        text-transform: uppercase;
+        border: 1px black;
+        box-shadow: 5px #888888;
+    }
+}
+
+.radio-btn{
+    .radio{
+        cursor: pointer;
+    }
+}
+
+.radio-label{
+    font-size: 20px;
+    padding-left: 5px;
+}

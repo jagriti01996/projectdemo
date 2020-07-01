@@ -4,8 +4,11 @@
         "about": "About",
         "activities": "Activities",
         "aboutHeading": "From  where we start...",
-        "aboutDescription": "kaarwaa.N",
+        "aboutDescription": "Kaarwaa.N... is a non-government orgranisation founded and run by the students of Jabalpur Engineering College who are committed to work for poor, underprivileged, downtrodden and unaware, with the primary aim to teach students for JNV(Jawahar Navodaya Vidyalaya) Entrance Exam and promote ‘girls education’. Through different activities we try to address different issues like education, health and hygiene, environmental issues, government schemes and plans, livelihood and community issues.It is our empathy, the realisation that being the citizens of this country, it is our responsibility to take steps towards the welfare of Another India.",
         "activityHeading": "What we do while moving together in Kaarwaa...",
-        "activityDescription":"cloth-distribution"
+        "activityDescription1":"Child Education",
+        "activityDescription2":"Cloth Distribution",
+        "activityDescription3":"Plantaion",
+        "activityDescription4":"Education kit"
     }
 }

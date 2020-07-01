@@ -1,14 +1,16 @@
 <ion-content class="bg-image" [fullscreen]="true">
-  <div>
-    <ion-slides pager="true" [options]="slideOpts">
+  <div class="slider">
+    <ion-slides [options]="slideOptions" pager="true" #slider (ionSlidesDidLoad)="slidesDidLoad(slider)">
       <ion-slide>
         <img src="assets/image/kaarwaa.n.jpg" />
       </ion-slide>
       <ion-slide>
         <img src="assets/image/kaarwaa.n.jpg" />
+        <!-- <img src="assets/image/imgk1.jpg" /> -->
       </ion-slide>
       <ion-slide>
         <img src="assets/image/kaarwaa.n.jpg" />
+        <!-- <img src="assets/icon/kaarwaa.Nlogo.jpg" /> -->
       </ion-slide>
     </ion-slides>
   </div>
@@ -27,15 +29,24 @@
     <div [ngSwitch]="tab">
       <ion-list *ngSwitchCase="'about'">
         {{'home.aboutHeading' | translate}}
-        <ion-item>
+        <ion-item lines="none">
           {{'home.aboutDescription' | translate}}
-        </ion-item>
+        </ion-item >
       </ion-list>
       <ion-list *ngSwitchCase="'activities'">
         {{'home.activityHeading' | translate}}
-        <ion-item>
-          {{'home.activityDescription' | translate}}
-        </ion-item>
+        <ion-item lines="none" class="item" >
+          {{'home.activityDescription1' | translate}}
+        </ion-item >
+        <ion-item lines="none" class="item">
+          {{'home.activityDescription2' | translate}}
+        </ion-item >
+        <ion-item lines="none" class="item">
+          {{'home.activityDescription3' | translate}}
+        </ion-item >
+        <ion-item lines="none" class="item">
+          {{'home.activityDescription4' | translate}}
+        </ion-item >
       </ion-list>
     </div>
   </ion-card>

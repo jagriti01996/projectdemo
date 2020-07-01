@@ -4,9 +4,10 @@ ion-content.bg-image{
     --background: url('../../../assets/image/helpinghands.jpg');
        width: -webkit-fill-available;
    }
+
 ion-content{
     img{
-        margin-top: 50px;
+        margin-top: 60px;
         width: 80%;
     }
 }
@@ -28,7 +29,6 @@ ion-card-subtitle{
 }
 
 ion-card-content{
-    
     display: flex;
     flex-direction: column;
     padding: 28px;
@@ -36,9 +36,22 @@ ion-card-content{
 }
 
 ion-label,p{
-    font: 20px Georgia, "Times New Roman", Times, serif;;
+    font: 20px $font-asimoveedge-wideit;
     padding: 10px;
     color: black;
+}
+
+ion-list{
+    text-align: center;
+    font: 30px $font-mala-text;
+    color: black;
+}
+
+.item{
+    --background: none;
+    font: 20px $font-mala-text;
+    color: black;
+    line-height: 40px;
 }
 
 

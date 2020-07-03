@@ -28,5 +28,42 @@
         "title4": "Plantation",
         "description4": "Plantation of trees started as a foundation in the now called 'Kaarwaa.N Garden' in JEC. Campaigns are conducted by Kaarwaa.N to spread awareness about tree plantation and how deforestation is leading to threats like climate change. Other activities involve 'Nukkad Natak' and creative activities like poster making. The plantation is done in association with recognized authorities like Municipal Corporation and Nagar Palika.",
         "subtitle4": "Goal of Kaarwaa.N is to inspire people to change their attitudes and behaviors toward a more sustainable life."
+    },
+    "blog":{
+        "ideasHeading":"Put your innovative ideas below !",
+        "ideasSubheading": "Let's take our first step towards change...",
+        "namePlaceholder": "Your name",
+        "ideaPlaceholder": "Your ideas...",
+        "submissionMsg": "Thanks for sharing your ideas..."
+    },
+    "button":{
+        "btnText": "Submit"
+    },
+    "header":{
+        "subtitle": "A step for the welfare of Another India"
+    },
+    "menu":{
+        "home": "Home",
+        "register": "Register",
+        "activities": "See activities",
+        "ideas": "Post your ideas"
+    },
+    "register":{
+        "title": "Join Us ! ",
+        "subtitle": "Become the part of helping hands...",
+        "name": "Name :",
+        "nameText": "Enter your name",
+        "email": "Email-id : ",
+        "emailText": "Enter your email-id",
+        "contact": "Contact Number : ",
+        "contactText": "Enter your mobile number",
+        "address": "Address : ",
+        "addressText": "Enter your address",
+        "postalcode": "Postal-code : ",
+        "postalcodeText": "Enter your postal-code",
+        "profile": "Please select your profile :",
+        "age": "Please select your age:",
+        "notify":"Notify me for future events.",
+        "message": "Thank you for joining us ..."
     }
 }

@@ -22,10 +22,11 @@ import { HomeComponent } from './components/home/home.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ActivitiesComponent } from './components/activities/activities.component';
+import { ButtonComponent } from './components/button/button.component';
 
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent,RegisterComponent, MenuBarComponent, HomeComponent, BlogComponent,ActivitiesComponent],
+  declarations: [AppComponent, HeaderComponent,RegisterComponent, MenuBarComponent, HomeComponent, BlogComponent,ActivitiesComponent, ButtonComponent],
   entryComponents: [],
   imports:
    [
@@ -55,7 +56,6 @@ import { ActivitiesComponent } from './components/activities/activities.componen
 })
 export class AppModule {}
 
-// required for AOT compilation
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }

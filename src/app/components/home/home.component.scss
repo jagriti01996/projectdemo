@@ -12,14 +12,6 @@ ion-card{
     background: linear-gradient(to top, #caebfd 0%, #ffffff 100%)
 }
 
-ion-card-title{
-    font: 40px $font-asimoveedge;
-}
-
-ion-card-subtitle{
-    font: 32px $font-mala-text;
-}
-
 ion-card-content{
     display: flex;
     flex-direction: column;
@@ -33,7 +25,7 @@ ion-label,p{
     color: darkslateblue;
 }
 
-ion-list{
+ion-list,.subtitle{
     --ion-item-background: none;
     text-align: center;
     font: 30px $font-mala-text;
@@ -51,9 +43,61 @@ ion-list{
 }
 
 ion-slide{
-   width: 100% !important;
-   height: 552px !important;
+    margin-top: 3%;
 }
 
+@media only screen and (min-width: 900px) and (max-width: 1024px) {
+    ion-card{
+        width: 80%;
+    }
+ 
+    ion-card-content,p{
+        font-size: 16px;
+    }
+    
+    ion-list,.subtitle{
+        ion-col{
+            line-height: 25px;
+        }
+    }
+
+}
+
+@media only screen  and (max-width: 899px){
+    ion-card{
+        width: 90%;
+        margin: 100px auto;
+        padding: 10px;
+    }
+   
+    ion-card-content,p{
+        font-size: 14px;
+    }
+    ion-list,.subtitle{
+        font-size: 20px;
+        ion-col{
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+    .item,.about{
+        img{
+            margin: 0;
+        }
+    }
+    ion-label,p{
+        font-size: 17px;
+    }
+
+    .about,.activity
+    {
+        display: grid;
+    }
+
+    ion-slide{
+        margin-top: 16%;
+    }
+ 
+}
 
 

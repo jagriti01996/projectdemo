@@ -1,0 +1,30 @@
+@import '../../../assets/font/font-variables.scss';
+
+.submit-btn{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;    
+    .button{
+        font-size: 20px;
+        font-family:  $font-asimoveedge;
+        --background: linear-gradient(to bottom right,#ff8000, 	#ffffff);
+        color: black;
+        width: 240px;
+        height: 50px;
+        text-transform: uppercase;
+        border: 1px black;
+        border-radius: 4px;
+        box-shadow: 5px #888888;
+    }
+}
+
+@media only screen and (max-width: 899px){
+    .submit-btn{
+        margin-top: 10px;
+        .button{
+            font-size: 16px;
+            width: 175px;
+            height: 40px;
+        }
+    }
+}

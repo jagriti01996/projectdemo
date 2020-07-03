@@ -8,7 +8,6 @@
 }
 
 .title{
-
     .text{
         font-size: 30px;
         font-weight: bolder;
@@ -28,7 +27,6 @@
 }
 
 ion-buttons{
-    // background:  linear-gradient(to bottom right,#ff8000, 	#ffffff);
     margin: 0;
     padding: 0;
 }
@@ -38,7 +36,6 @@ ion-menu-button {
 
   @media only screen  and (max-width: 899px){
     .title{
-
         .text{
             font-size: 20px;
             letter-spacing: 3.4px;
@@ -52,3 +49,9 @@ ion-menu-button {
         font-size: 14px;
     }
   }
+
+  @media only screen  and(max-width: 320px){
+    .sub-title{
+        font-size: 13px;
+    }
+}

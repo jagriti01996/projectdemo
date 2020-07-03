@@ -1,21 +1,22 @@
 <ion-content padding class="bg-image">
   <ion-card>
-    <ion-card-title>Put your innovative ideas below !</ion-card-title>
-    <ion-card-subtitle>Let's take our first step towards change...</ion-card-subtitle>
+    <ion-card-title *ngIf="!submitted">{{'blog.ideasHeading' | translate}}</ion-card-title>
+    <ion-card-subtitle *ngIf="!submitted">{{'blog.ideasSubheading' | translate}}</ion-card-subtitle>
     <form #userIdeas="ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit()" novalidate>
       <ion-item>
-        <ion-input name="name" #name="ngModel" [(ngModel)]="ideaModel.userName"  placeholder="Your name" ></ion-input>
+        <ion-input name="name" #name="ngModel" [(ngModel)]="ideaModel.userName"  placeholder="{{'blog.namePlaceholder' | translate}}" ></ion-input>
       </ion-item>
       <br/>
       <ion-item lines="none">
-        <ion-textarea placeholder="Your ideas..." name="ideas" #ideas="ngModel" [(ngModel)]="ideaModel.userIdea" ></ion-textarea>
+        <ion-textarea placeholder="{{'blog.ideaPlaceholder' | translate}}" name="ideas" #ideas="ngModel" [(ngModel)]="ideaModel.userIdea" ></ion-textarea>
       </ion-item>
-      <div class="submit-btn">
-        <ion-button  type="submit" class="button" >Submit</ion-button>
-      </div> 
+      <app-button></app-button>
     </form>
     <div  class="idea-submitted" *ngIf=submitted>
-      Thanks for sharing your ideas...
+      {{'blog.submissionMsg' | translate}}
+      <div>
+        <img src="assets/image/volunteers.jpg">
+      </div>
     </div>
   </ion-card>
 </ion-content>

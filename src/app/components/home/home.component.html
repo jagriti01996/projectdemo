@@ -19,9 +19,9 @@
     </ion-card-header>
     <div [ngSwitch]="tab">
       <ion-list *ngSwitchCase="'about'">
-        {{'home.aboutHeading' | translate}}
+        <p class="subtitle">{{'home.aboutHeading' | translate}}</p>
         <ion-row class="about">
-          <ion-col size=5>
+          <ion-col >
             <img src="assets/icon/kaarwaa.Nlogo.jpg">
           </ion-col>
           <ion-col >
@@ -30,9 +30,9 @@
         </ion-row>
       </ion-list>
       <ion-list *ngSwitchCase="'activities'">
-        {{'home.activityHeading' | translate}}
-        <ion-row>
-          <ion-col size=4>
+        <p class="subtitle">{{'home.activityHeading' | translate}}</p>
+        <ion-row class="activity">
+          <ion-col >
             <img src="assets/image/help.jpg">
           </ion-col>
           <ion-col>

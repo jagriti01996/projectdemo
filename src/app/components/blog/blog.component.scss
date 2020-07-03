@@ -16,12 +16,20 @@
         font: 40px $font-asimoveedge;
     }
     
-    ion-card-subtitle,.idea-submitted{
+    ion-card-subtitle{
         font: 32px $font-mala-text;
+    }
+
+    .idea-submitted{
+        text-align: center;
+        color: black;
+        font: 40px $font-mala-text;
+        img{
+            margin: 20px auto;
+        }
     }
     
     ion-card-content{
-        
         display: flex;
         flex-direction: column;
         padding: 28px;
@@ -29,36 +37,64 @@
     }
     
     ion-label,p{
-        font: 20px Georgia, "Times New Roman", Times, serif;;
+        font: 20px cursive;
         padding: 10px;
         color: black;
     }
     
     ion-textarea{
-        font: 20px Georgia, "Times New Roman", Times, serif;
+        font: 20px cursive;
         padding: 10px;
         height: 500px;
         margin-top: 30px;
-        // color: gray;
-        // border-radius: 4px;
-        // border: solid lightblue;
     }
     
-    .submit-btn{
-        margin-top: 30px;
-        display: flex;
-        justify-content: center;    
-        .button{
+    @media only screen and (min-width: 900px) and (max-width: 1024px) {
+        ion-card{
+            width: 60%;
+        }
+        ion-card-title,.idea-submitted{
+            font-size: 32px;
+        }
+        ion-card-subtitle{
             font-size: 20px;
-            font-family:  $font-asimoveedge;
-            --background: linear-gradient(to bottom right,#ff8000, 	#ffffff);
-            color: black;
-            width: 240px;
-            height: 50px;
-            text-transform: uppercase;
-            border: 1px black;
-            box-shadow: 5px #888888;
+        }
+        ion-card-content{
+            font-size: 16px;
+            
+        }
+    
+    }
+    
+    @media only screen  and (max-width: 899px){
+        ion-card{
+            width: 90%;
+            margin: 100px auto;
+            padding: 10px;
+        }
+        ion-card-title,.idea-submitted{
+            font-size: 20px;
+        }
+        ion-card-subtitle{
+            font-size: 14px;
+        }
+        ion-card-content{
+            font-size: 16px;
+            padding: 10px;
+            margin: 0;
+        }
+    
+        ion-item{
+            .label{
+                font-size: 20px;
+            }
+        }
+        ion-input{
+            font-size: 16px;
+        }
+        ion-textarea{
+            font-size: 16px;
+            height: 250px;
         }
     }
-
 

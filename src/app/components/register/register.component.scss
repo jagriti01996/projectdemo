@@ -16,8 +16,16 @@ ion-card-title{
     font: 40px $font-asimoveedge;
 }
 
-ion-card-subtitle,.submission-message{
+ion-card-subtitle{
     font: 32px $font-mala-text;
+}
+.submission-message{
+    text-align: center;
+    color: black;
+    font: 40px $font-mala-text;
+    img{
+        margin: 20px auto;
+    }
 }
 
 ion-card-content{
@@ -32,7 +40,7 @@ ion-item{
     --background: none;
     width: -webkit-fill-available;
     .label{
-        font-family: Georgia, "Times New Roman", Times, serif;
+        font-family: cursive;
         font-size: 27px;
         padding-bottom: 10px;
         --ion-color-primary: black;
@@ -40,40 +48,23 @@ ion-item{
 }
 
 .invalid{
-    --highlight-background:yellow;
+    --highlight-background:red;
 }
 
 p{
-    font: 20px Georgia, "Times New Roman", Times, serif;
+    font: 20px cursive;
     padding: 10px;
     color: black;
 }
 
 ion-input{
-    font: 20px Georgia, "Times New Roman", Times, serif;
+    font: 20px cursive;
     padding: 10px;
 }
 
 ion-checkbox{
-    font: 20px Georgia, "Times New Roman", Times, serif;
+    font: 20px cursive;
     margin-inline-end: 14px;
-}
-
-.submit-btn{
-    display: flex;
-    justify-content: center;    
-    .button{
-        font-size: 20px;
-        font-family:  $font-asimoveedge;
-        --background: linear-gradient(to bottom right,#ff8000, 	#ffffff);
-        color: black;
-        width: 240px;
-        height: 50px;
-        text-transform: uppercase;
-        border: 1px black;
-        border-radius: 4px;
-        box-shadow: 5px #888888;
-    }
 }
 
 .radio-btn{
@@ -83,6 +74,57 @@ ion-checkbox{
 }
 
 .radio-label{
-    font-size: 20px;
+    font: 20px cursive;
     padding-left: 5px;
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1024px) {
+    ion-card{
+        width: 60%;
+    }
+    ion-card-title,.submission-message{
+        font-size: 32px;
+    }
+    ion-card-subtitle{
+        font-size: 20px;
+    }
+    ion-card-content,p{
+        font-size: 16px;
+        
+    }
+
+}
+
+@media only screen  and (max-width: 899px){
+    ion-card{
+        width: 90%;
+        margin: 100px auto;
+        padding: 10px;
+    }
+    ion-card-title,.submission-message{
+        font-size: 20px;
+    }
+    ion-card-subtitle{
+        font-size: 14px;
+    }
+    ion-card-content,p{
+        font-size: 16px;
+        padding: 10px;
+        margin: 0;
+    }
+
+    ion-item{
+        .label{
+            font-size: 20px;
+        }
+    }
+    ion-input{
+        font-size: 16px;
+    }
+    .description{
+        display: none;
+    }
+    .radio-label{
+        font-size: 16px;
+    }
 }

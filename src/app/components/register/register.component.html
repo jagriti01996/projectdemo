@@ -1,40 +1,36 @@
 <ion-content class="bg-image">
   <ion-card>
-    <ion-card-title>
-      Join Us ! 
-      <ion-card-subtitle>Become the part of helping hands...</ion-card-subtitle>
+    <ion-card-title *ngIf=!submitted>
+      {{'register.title' | translate}}
+      <ion-card-subtitle *ngIf=!submitted >{{'register.subtitle' | translate}}</ion-card-subtitle>
     </ion-card-title>
     <ion-card-content>
         
         <form #userForm="ngForm" *ngIf=!submitted (ngSubmit)="onSubmit()" novalidate>
-         
           <ion-item [class.invalid]='name.invalid'>
-            <ion-label class="label" position="stacked" >Name : </ion-label>
-          <ion-input type="text" placeholder="Enter your first name" #name='ngModel'  required  name="name" [(ngModel)]="userModel.name" ></ion-input>
+            <ion-label class="label" position="stacked" >{{'register.name' | translate}}</ion-label>
+          <ion-input type="text" placeholder="{{'register.nameText' | translate}}" #name='ngModel'  required  name="name" [(ngModel)]="userModel.name" ></ion-input>
           </ion-item>
           <ion-item>
-            <ion-label  class="label" position="stacked">Email-id : </ion-label>
-          <ion-input type="text" placeholder="Enter your email-id" name="email" #email="ngModel" [class.invalid]='email.invalid'  [(ngModel)]="userModel.email" required></ion-input>
+            <ion-label  class="label" position="stacked">{{'register.email' | translate}}</ion-label>
+          <ion-input type="text" placeholder="{{'register.emailText' | translate}}" name="email" #email="ngModel" [class.invalid]='email.invalid'  [(ngModel)]="userModel.email" required></ion-input>
           </ion-item>
           <ion-item [class.invalid]='contact.invalid'>
-            <ion-label class="label"  position="stacked" >Contact Number : </ion-label>
-          <ion-input type="tel" placeholder="Enter your mobile number" name="contact" #contact="ngModel" pattern="^\d{10}$"  [(ngModel)]="userModel.contactNumber" ></ion-input>
+            <ion-label class="label"  position="stacked" >{{'register.contact' | translate}}</ion-label>
+          <ion-input type="tel" placeholder="{{'register.contactText' | translate}}" name="contact" #contact="ngModel" pattern="^\d{10}$"  [(ngModel)]="userModel.contactNumber" ></ion-input>
           </ion-item>
-
-          <ion-item lines="none" ngModelGroup="address">
-              <ion-label class="label" position="stacked">Address : </ion-label>
-              <ion-item>
-              <ion-input type="text" placeholder="Enter your address" #address="ngModel" name="address"  [(ngModel)]="userModel.address" ></ion-input>
-              </ion-item>
-              <ion-item>
-                <ion-label class="label" position="stacked">Postal-code : </ion-label>
-              <ion-input type="text" placeholder="Enter your postal-code" #postalCode='ngModel' name="postal-code"  [(ngModel)]="userModel.postalcode" ></ion-input>
-              </ion-item>
-
+              
+          <ion-item>
+            <ion-label class="label" position="stacked">{{'register.address' | translate}}</ion-label>
+            <ion-input type="text" placeholder="{{'register.addressText' | translate}}" #address="ngModel" name="address"  [(ngModel)]="userModel.address" ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label class="label" position="stacked">{{'register.postalcode' | translate}} </ion-label>
+            <ion-input type="text" placeholder="{{'register.postalcodeText' | translate}}" #postalCode='ngModel' name="postal-code"  [(ngModel)]="userModel.postalcode" ></ion-input>
           </ion-item>
         
           <div class="profile">
-            <p>Please select your profile :</p>
+            <p>{{'register.profile' | translate}}</p>
             <ion-radio-group class="radio-btn" name="profile" [(ngModel)]="userModel.profile">
                 <ion-item lines="none" *ngFor="let profile of profiles">
                   <ion-radio  class="radio"></ion-radio>
@@ -44,7 +40,7 @@
           </div>
 
           <div class="age">
-            <p>Please select your age:</p>
+            <p>{{'register.age' | translate}}</p>
             <ion-radio-group name="age" [(ngModel)]="userModel.age">
               <ion-item lines="none" *ngFor="let age of ages">
                 <ion-radio  class="radio" ></ion-radio>
@@ -53,19 +49,19 @@
             </ion-radio-group>
           </div>
          
-
          <ion-item  lines="none">
           <ion-checkbox slot="start"  [(ngModel)]="userModel.subscribe" name="notify"></ion-checkbox>
-          <ion-label>Notify me for future events.</ion-label>
+          <ion-label>{{'register.notify' | translate}}</ion-label>
         </ion-item>
          
-          <div class="submit-btn">
-            <ion-button  type="submit" class="button">Submit</ion-button>
-          </div> 
+          <app-button></app-button>
       </form>
 
       <div *ngIf=submitted  class="submission-message">
-        Thank you for joining us ...
+        {{'register.message' | translate}}
+        <div>
+          <img src="assets/image/volunteers.jpg">
+        </div>
       </div>
 
     </ion-card-content>

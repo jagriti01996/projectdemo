@@ -1,20 +1,11 @@
 <ion-content class="bg-image" [fullscreen]="true">
-  <div class="slider">
+  
     <ion-slides [options]="slideOptions" pager="true" #slider (ionSlidesDidLoad)="slidesDidLoad(slider)">
-      <ion-slide>
-        <img src="assets/image/kaarwaa.n.jpg" />
-      </ion-slide>
-      <ion-slide>
-        <img src="assets/image/kaarwaa.n.jpg" />
-        <!-- <img src="assets/image/imgk1.jpg" /> -->
-      </ion-slide>
-      <ion-slide>
-        <img src="assets/image/kaarwaa.n.jpg" />
-        <!-- <img src="assets/icon/kaarwaa.Nlogo.jpg" /> -->
+      <ion-slide *ngFor="let image of images"  width="1240" height="300">
+        <img src="{{image}}" />
       </ion-slide>
     </ion-slides>
-  </div>
-
+  
   <ion-card>
     <ion-card-header>
       <ion-segment  [(ngModel)]="tab">
@@ -29,24 +20,36 @@
     <div [ngSwitch]="tab">
       <ion-list *ngSwitchCase="'about'">
         {{'home.aboutHeading' | translate}}
-        <ion-item lines="none">
-          {{'home.aboutDescription' | translate}}
-        </ion-item >
+        <ion-row class="about">
+          <ion-col size=5>
+            <img src="assets/icon/kaarwaa.Nlogo.jpg">
+          </ion-col>
+          <ion-col >
+            {{'home.aboutDescription' | translate}}
+          </ion-col >
+        </ion-row>
       </ion-list>
       <ion-list *ngSwitchCase="'activities'">
         {{'home.activityHeading' | translate}}
-        <ion-item lines="none" class="item" >
-          {{'home.activityDescription1' | translate}}
-        </ion-item >
-        <ion-item lines="none" class="item">
-          {{'home.activityDescription2' | translate}}
-        </ion-item >
-        <ion-item lines="none" class="item">
-          {{'home.activityDescription3' | translate}}
-        </ion-item >
-        <ion-item lines="none" class="item">
-          {{'home.activityDescription4' | translate}}
-        </ion-item >
+        <ion-row>
+          <ion-col size=4>
+            <img src="assets/image/help.jpg">
+          </ion-col>
+          <ion-col>
+            <ion-item lines="none" class="item" >
+              {{'home.activityDescription1' | translate}}
+            </ion-item >
+            <ion-item lines="none" class="item">
+              {{'home.activityDescription2' | translate}}
+            </ion-item >
+            <ion-item lines="none" class="item">
+              {{'home.activityDescription3' | translate}}
+            </ion-item >
+            <ion-item lines="none" class="item">
+              {{'home.activityDescription4' | translate}}
+            </ion-item >
+          </ion-col>
+        </ion-row>
       </ion-list>
     </div>
   </ion-card>

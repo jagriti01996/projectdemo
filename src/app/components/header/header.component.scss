@@ -1,23 +1,19 @@
 @import '../../../assets/font/font-variables.scss';
 
 .header{
-    background: linear-gradient(to bottom right,#ff8000, 	#ffffff);
+    --ion-toolbar-background: linear-gradient(to bottom right,#ff8000, 	#ffffff);
     display: flex;
     flex-direction: row;
     text-align: center;
 }
 
-ion-title{
-  background: linear-gradient(to bottom right,#ff8000, 	#ffffff);
-}
-
 .title{
+
     .text{
-      
         font-size: 30px;
-    font-weight: bolder;
-    font-family: $font-mala-text;
-    letter-spacing: 4.4px;
+        font-weight: bolder;
+        font-family: $font-mala-text;
+        letter-spacing: 4.4px;
     }
     span{
         font-size: 35px;
@@ -38,4 +34,21 @@ ion-buttons{
 }
 ion-menu-button {
     --color: black;
+  }
+
+  @media only screen  and (max-width: 899px){
+    .title{
+
+        .text{
+            font-size: 20px;
+            letter-spacing: 3.4px;
+        }
+        span{
+            font-size: 25px;
+        }
+    }
+    
+    .sub-title{
+        font-size: 14px;
+    }
   }

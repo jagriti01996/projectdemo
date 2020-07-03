@@ -10,5 +10,23 @@
         "activityDescription2":"Cloth Distribution",
         "activityDescription3":"Plantaion",
         "activityDescription4":"Education kit"
+    },
+
+    "activities":
+    {
+        "title1": "Child Education",
+        "subtitle1": "“Education is not the filling of a pail, but the lighting of a fire.” ~ William Butler Yeats",
+        "description1": "Every year Kaarwaa.N conducts teaching sessions for the preparation of several examinations like Navodaya, Gyanodaya & Samodaya for underpriviledged kids. Kaarwaa.N conduct these sessions in several local schools. This is done to help children enroll in schools with good study programmes, getting into which is very hard. The children are provided with study material and stationery from the organizers and the alumni of Kaarwaan.",
+        "title2": "Cloth Distribution",
+        "subtitle2": "Kaarwaa.N regularly organises cloth distrubution programme for needy. Most of the clothes collected from the households in our contact, we also volunteer for those who wants to donate their clothes. Anyone can donate their clothes to help poor.",
+        "currentScenario": "Current Scenario :",
+        "description2" : "The moment you stop your car at the traffic red light, you see a dirty looking woman with a child in her arm come running to you or a little boy with running nose banging your car window or a handicapped old man asking for alms. This is a common sight in India. According to a recent Indian government committee constituted to estimate poverty, nearly 38% of India’s population (380 million) is poor.Even after more than 50 years of Independence India still has the world's largest number of poor people in a single country. A strong system of incentives and disincentives also needs to be introduced. The encouragement of non-governmental organizations and private sector individuals in tackling poverty is imperative, as the state cannot do everything. Kaarwaa.N always try and takes steps against poverty.",
+        "title3": "Orphanage Visit",
+        "subtitle3": "Kaarwaa.N regularly visits orhanage and organise different activities. Kaarwaa.N don't need any special occassion to visit to celebrate the day with those young ones with whom life is being unfair. We're the hope for them that life can be interesting full of wonders. Kaarwaa.N share their feeling, sing and dance, perform drama together. Also Kaarwaa.N try to expose them to outer world and encourage. Our small helping hands encourage many lives to find new path out of disgrace.",
+        "storyHeading":"A child who met his parents",
+        "description3": "This is a story of a child who was lost in this big world full of unknown faces. On a random visit to orphanage Kaarwaa.N members found him sitting unnoticed in the corner, looking despair. He remained silent for sometime when we try to know the reason behind his sorrow that can be easily noticed from his face. Suddenly he started crying and hugged one of the Kaarwaa.N member and narrate his sorrowful story to us. He ran away from his home because of some family issues and somehow orphanage's staff found this boy and bring him here. He has been staying in the orphanage for almost more than a week. Kaarwaa.N team made efforts and tried their best to find his parents. At last, Kaarwaa.N is able to find their contact and reunite this innocent lost child to his family. Kaarwaa.N always act as a helping hand for needy.",
+        "title4": "Plantation",
+        "description4": "Plantation of trees started as a foundation in the now called 'Kaarwaa.N Garden' in JEC. Campaigns are conducted by Kaarwaa.N to spread awareness about tree plantation and how deforestation is leading to threats like climate change. Other activities involve 'Nukkad Natak' and creative activities like poster making. The plantation is done in association with recognized authorities like Municipal Corporation and Nagar Palika.",
+        "subtitle4": "Goal of Kaarwaa.N is to inspire people to change their attitudes and behaviors toward a more sustainable life."
     }
 }

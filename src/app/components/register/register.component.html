@@ -1,80 +1,72 @@
 <ion-content class="bg-image">
   <ion-card>
     <ion-card-title>
-      Join Us ! <br>
+      Join Us ! 
       <ion-card-subtitle>Become the part of helping hands...</ion-card-subtitle>
     </ion-card-title>
     <ion-card-content>
-        <ion-item>
-          <ion-label class="label" position="stacked">First Name : </ion-label>
-        <ion-input type="text" placeholder="Enter your first name" ></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label  class="label" position="stacked">Last Name : </ion-label>
-        <ion-input type="text" placeholder="Enter your last name"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label class="label" position="stacked">Password : </ion-label>
-        <ion-input type="password" placeholder="Enter your password"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label  class="label" position="stacked">Confirm Password</ion-label>
-        <ion-input type="password" placeholder="Re-enter the password to confirm"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label class="label"  position="stacked">Contact Number : </ion-label>
-        <ion-input type="tel" placeholder="Enter your mobile number"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label class="label" position="stacked">Address : </ion-label>
-        <ion-input type="text" placeholder="Enter your address" ></ion-input>
-        </ion-item>
-      
-       <ion-radio-group>
-        <div class="profile">
-          <p>Please select your profile :</p>
-          <ion-radio-group class="radio-btn">
-              <ion-item lines="none">
-                <ion-radio  class="radio"></ion-radio>
-                <ion-label class="radio-label">Student</ion-label>
-              </ion-item> 
-              <ion-item lines="none">
-                <ion-radio  class="radio"></ion-radio>
-                <ion-label class="radio-label">Professor</ion-label>
+        
+        <form #userForm="ngForm" *ngIf=!submitted (ngSubmit)="onSubmit()" novalidate>
+         
+          <ion-item [class.invalid]='name.invalid'>
+            <ion-label class="label" position="stacked" >Name : </ion-label>
+          <ion-input type="text" placeholder="Enter your first name" #name='ngModel'  required  name="name" [(ngModel)]="userModel.name" ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label  class="label" position="stacked">Email-id : </ion-label>
+          <ion-input type="text" placeholder="Enter your email-id" name="email" #email="ngModel" [class.invalid]='email.invalid'  [(ngModel)]="userModel.email" required></ion-input>
+          </ion-item>
+          <ion-item [class.invalid]='contact.invalid'>
+            <ion-label class="label"  position="stacked" >Contact Number : </ion-label>
+          <ion-input type="tel" placeholder="Enter your mobile number" name="contact" #contact="ngModel" pattern="^\d{10}$"  [(ngModel)]="userModel.contactNumber" ></ion-input>
+          </ion-item>
+
+          <ion-item lines="none" ngModelGroup="address">
+              <ion-label class="label" position="stacked">Address : </ion-label>
+              <ion-item>
+              <ion-input type="text" placeholder="Enter your address" #address="ngModel" name="address"  [(ngModel)]="userModel.address" ></ion-input>
               </ion-item>
-              <ion-item lines="none">
-                <ion-radio  class="radio"></ion-radio>
-                <ion-label class="radio-label">Alumina</ion-label>
+              <ion-item>
+                <ion-label class="label" position="stacked">Postal-code : </ion-label>
+              <ion-input type="text" placeholder="Enter your postal-code" #postalCode='ngModel' name="postal-code"  [(ngModel)]="userModel.postalcode" ></ion-input>
               </ion-item>
-              <ion-item lines="none">
-                <ion-radio  class="radio"></ion-radio>
-                <ion-label class="radio-label">Helper</ion-label>
+
+          </ion-item>
+        
+          <div class="profile">
+            <p>Please select your profile :</p>
+            <ion-radio-group class="radio-btn" name="profile" [(ngModel)]="userModel.profile">
+                <ion-item lines="none" *ngFor="let profile of profiles">
+                  <ion-radio  class="radio"></ion-radio>
+                  <ion-label class="radio-label">{{profile}}</ion-label>
+                </ion-item> 
+          </ion-radio-group>
+          </div>
+
+          <div class="age">
+            <p>Please select your age:</p>
+            <ion-radio-group name="age" [(ngModel)]="userModel.age">
+              <ion-item lines="none" *ngFor="let age of ages">
+                <ion-radio  class="radio" ></ion-radio>
+                <ion-label class="radio-label">{{age}}</ion-label>
               </ion-item>
             </ion-radio-group>
-        </div>
+          </div>
+         
 
-        <div class="age">
-          <p>Please select your age:</p>
-          <ion-radio-group>
-            <ion-item lines="none">
-              <ion-radio  class="radio"></ion-radio>
-              <ion-label class="radio-label">0 - 30</ion-label>
-            </ion-item> 
-            <ion-item lines="none">
-              <ion-radio  class="radio"></ion-radio>
-              <ion-label class="radio-label">31 - 60</ion-label>
-            </ion-item>
-            <ion-item lines="none">
-              <ion-radio  class="radio"></ion-radio>
-              <ion-label class="radio-label">61 - 100</ion-label>
-            </ion-item>
-          </ion-radio-group>
-        </div>
-       </ion-radio-group>
+         <ion-item  lines="none">
+          <ion-checkbox slot="start"  [(ngModel)]="userModel.subscribe" name="notify"></ion-checkbox>
+          <ion-label>Notify me for future events.</ion-label>
+        </ion-item>
+         
+          <div class="submit-btn">
+            <ion-button  type="submit" class="button">Submit</ion-button>
+          </div> 
+      </form>
 
-        <div class="submit-btn">
-          <ion-button class="button">Submit</ion-button>
-        </div> 
+      <div *ngIf=submitted  class="submission-message">
+        Thank you for joining us ...
+      </div>
 
     </ion-card-content>
   </ion-card>

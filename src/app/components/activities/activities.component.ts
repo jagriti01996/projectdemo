@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewChild } from '@angular/core';
+import {IonSlides} from '@ionic/angular';
 
 @Component({
   selector: 'app-activities',
@@ -7,7 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivitiesComponent implements OnInit {
 
+  @ViewChild('slides') slides: IonSlides;
+
   constructor() { }
+
+  next() {
+    this.slides.slideNext();
+  }
+
+  prev() {
+    this.slides.slidePrev();
+  }
 
   ngOnInit() {}
 

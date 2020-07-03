@@ -2,11 +2,20 @@
   <ion-card>
     <ion-card-title>Put your innovative ideas below !</ion-card-title>
     <ion-card-subtitle>Let's take our first step towards change...</ion-card-subtitle>
-    <ion-item>
-      <ion-textarea placeholder="Enter more information here..."></ion-textarea>
-    </ion-item>
-    <div class="submit-btn">
-      <ion-button class="button" >Submit</ion-button>
-    </div> 
+    <form #userIdeas="ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit()" novalidate>
+      <ion-item>
+        <ion-input name="name" #name="ngModel" [(ngModel)]="ideaModel.userName"  placeholder="Your name" ></ion-input>
+      </ion-item>
+      <br/>
+      <ion-item lines="none">
+        <ion-textarea placeholder="Your ideas..." name="ideas" #ideas="ngModel" [(ngModel)]="ideaModel.userIdea" ></ion-textarea>
+      </ion-item>
+      <div class="submit-btn">
+        <ion-button  type="submit" class="button" >Submit</ion-button>
+      </div> 
+    </form>
+    <div  class="idea-submitted" *ngIf=submitted>
+      Thanks for sharing your ideas...
+    </div>
   </ion-card>
 </ion-content>

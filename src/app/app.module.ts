@@ -6,6 +6,7 @@ import {FormsModule} from '@angular/forms'
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import {MatStepperModule} from '@angular/material/stepper';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,10 +19,13 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
+import { BlogComponent } from './components/blog/blog.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { ActivitiesComponent } from './components/activities/activities.component';
 
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent,RegisterComponent, MenuBarComponent, HomeComponent],
+  declarations: [AppComponent, HeaderComponent,RegisterComponent, MenuBarComponent, HomeComponent, BlogComponent,ActivitiesComponent],
   entryComponents: [],
   imports:
    [
@@ -29,6 +33,7 @@ import { HomeComponent } from './components/home/home.component';
     IonicModule.forRoot(), 
     AppRoutingModule,
     FormsModule,
+    MatStepperModule,
     
      // ngx-translate and the loader module
      HttpClientModule,
@@ -38,7 +43,8 @@ import { HomeComponent } from './components/home/home.component';
              useFactory: HttpLoaderFactory,
              deps: [HttpClient]
          }
-     })
+     }),
+     NoopAnimationsModule
   ],
   providers: [
     StatusBar,

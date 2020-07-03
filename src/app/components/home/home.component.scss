@@ -5,16 +5,8 @@ ion-content.bg-image{
        width: -webkit-fill-available;
    }
 
-ion-content{
-    img{
-        margin-top: 60px;
-        width: 80%;
-    }
-}
-
 ion-card{
     width: 70%;
-    height: 700px;
     margin: 130px auto;
     padding: 30px;
     background: linear-gradient(to top, #caebfd 0%, #ffffff 100%)
@@ -36,22 +28,31 @@ ion-card-content{
 }
 
 ion-label,p{
-    font: 20px $font-asimoveedge-wideit;
+    font: 20px $font-asimoveedge;
     padding: 10px;
-    color: black;
+    color: darkslateblue;
 }
 
 ion-list{
+    --ion-item-background: none;
     text-align: center;
     font: 30px $font-mala-text;
-    color: black;
+    color: darkslateblue;
 }
 
-.item{
-    --background: none;
-    font: 20px $font-mala-text;
+.item,.about{
+    height: fit-content;
+    font: 20px cursive;
     color: black;
     line-height: 40px;
+    img{
+        margin-top: 30px;
+    }
+}
+
+ion-slide{
+   width: 100% !important;
+   height: 552px !important;
 }
 
 

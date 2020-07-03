@@ -1,0 +1,88 @@
+@import '../../../assets/font/font-variables.scss';
+
+ion-content.bg-image{
+    --background: url('../../../assets/image/helpinghands.jpg');
+       width: -webkit-fill-available;
+   }
+
+   mat-horizontal-stepper{
+       margin-top: 100px;
+       background: none;
+   }
+
+   ion-card{
+    width: 55%;
+    margin: 130px auto;
+    padding: 30px;
+    background: linear-gradient(to top, #caebfd 0%, #ffffff 100%)
+}
+
+ion-card-title{
+    font: 40px $font-asimoveedge;
+}
+
+ion-card-subtitle{
+    font: 25px cursive;
+}
+
+ion-card-content,p{
+    font-size: 20px;
+    font-family: cursive;
+    color: black;
+    ion-row{
+        display: grid;
+        }
+}
+
+h2{
+    font: 25px $font-asimoveedge;
+}
+
+button{
+    background: none;
+    ion-icon{
+        width: 48px;
+        height: 40px;
+        color: cornflowerblue;
+    }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1024px) {
+    ion-card{
+        width: 60%;
+    }
+    ion-card-title{
+        font-size: 32px;
+    }
+    ion-card-subtitle{
+        font-size: 20px;
+    }
+    ion-card-content,p{
+        font-size: 16px;
+    }
+    h2{
+        font: 20px $font-asimoveedge;
+    }
+
+}
+
+@media only screen  and (max-width: 899px){
+    ion-card{
+        width: 80%;
+        margin: 100px auto;
+        padding: 10px;
+    }
+    ion-card-title{
+        font-size: 20px;
+    }
+    ion-card-subtitle{
+        font-size: 14px;
+    }
+    ion-card-content,p{
+        font-size: 14px;
+    }
+    
+    .description{
+        display: none;
+    }
+}

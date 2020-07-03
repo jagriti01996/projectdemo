@@ -9,6 +9,12 @@ import {IonSlides} from '@ionic/angular';
 export class HomeComponent implements OnInit {
   tab:string;
 
+  images=[
+    'assets/image/kaarwaa.n.jpg',
+    'assets/image/kaarwaa.n.jpg',
+    'assets/image/kaarwaa.n.jpg'
+  ]
+
   slideOptions = {
     initialSlide: 0,
     speed: 700,
